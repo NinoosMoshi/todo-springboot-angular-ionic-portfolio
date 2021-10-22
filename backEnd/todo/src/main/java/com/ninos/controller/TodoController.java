@@ -44,5 +44,11 @@ public class TodoController {
     }
 
 
+    @DeleteMapping("/delete/{todoId}")
+    public void deleteTodo(@PathVariable("todoId") Long todoId){
+        todoRepository.deleteById(todoId);
+    }
+
+
 
 }
